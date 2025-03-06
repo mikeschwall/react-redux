@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 import MainComponent from './MainComponent/MainComponent'
 import TodoList from './TodoList/TodoList'
 import axios from 'axios';
+<<<<<<< HEAD
+import SongList from './SongList/SongList';
+=======
+>>>>>>> main
 
 function App() {
 
@@ -13,13 +17,17 @@ function App() {
       .then(response => setTodos(response.data));
   },[]);
   
-
-  
+  const handleData = useCallback((item) => {
+    console.log("item",item);
+    setTodos(t => [{title:item},...t]);
+  },[]);
 
   return (
     <div>
-      <TodoList/>
-      {todos && todos.filter(item => item.id < 11).map(item => <li key={item.id}>{item.title}</li>)}
+      <SongList/>
+      <hr/>
+      <TodoList getdata={handleData}/>
+      {todos && todos.map(item => <li key={item.title}>{item.title}</li>)}
       <hr/>
       <MainComponent/>
     </div>
