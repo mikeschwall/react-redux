@@ -13,3 +13,5 @@ export const AuthContextProvider = ({children}) => {
 
     return <AuthContext.Provider value={{logStatus,logHandler}}>{children}</AuthContext.Provider>
 }
+
+export default AuthContext;
