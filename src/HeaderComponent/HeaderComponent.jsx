@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import AuthContext from "../Store/context";
+
 export const HeaderComponent = () => {
 
-    return <button>log</button>
+    const headerContext = useContext(AuthContext);
+
+    return <button onClick={() => headerContext.logHandler()}>{headerContext.logStatus === true ? "log out" : "log in"}</button>
 }
 
 export default HeaderComponent;

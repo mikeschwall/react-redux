@@ -1,6 +1,7 @@
 import HeaderComponent from "../HeaderComponent/HeaderComponent";
 
 const MainComponent = () => {
+
     return (
         <div>
             <HeaderComponent/>
