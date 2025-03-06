@@ -3,10 +3,7 @@ import './App.css'
 import MainComponent from './MainComponent/MainComponent'
 import TodoList from './TodoList/TodoList'
 import axios from 'axios';
-<<<<<<< HEAD
 import SongList from './SongList/SongList';
-=======
->>>>>>> main
 
 function App() {
 
