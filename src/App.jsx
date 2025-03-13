@@ -1,10 +1,14 @@
 import './App.css'
+import SongList from './SongList'
+import TodoList from './TodoList'
 
 function App() {
 
   return (
     <div>
-      test
+      <SongList/>
+      <hr/>
+      <TodoList/>
     </div>
   )
 }
